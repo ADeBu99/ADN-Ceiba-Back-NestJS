@@ -6,7 +6,6 @@ import {
   Param,
   Post,
   Put,
-  Query,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
 
@@ -14,15 +13,12 @@ import {
   DishDto,
   UpdateDishDto,
 } from '../../../aplicacion/dish/query/dto/dish.dto';
-import { DishEntity } from '../entity/dish.entidad';
-// import { DishesService } from './dishes.service';
 
 import { HandlerListDish } from 'src/aplicacion/dish/query/list-dish.handler';
 import { HandlerCreateDish } from 'src/aplicacion/dish/command/create-dish.handler';
 import { HandlerListDishById } from 'src/aplicacion/dish/query/list-dish-by-id.handler';
 import { HandlerDishUpdate } from 'src/aplicacion/dish/command/update-dish.handler';
 import { HandlerDishRemove } from 'src/aplicacion/dish/query/remove-dish.handler';
-import { Dish } from 'src/dominio/dish/model/dish';
 
 @ApiTags('dishes')
 @Controller('dishes')
@@ -48,7 +44,7 @@ export class DishController {
 
   @Get(':id')
   async getById(@Param('id') id: number): Promise<DishDto> {
-    return await this._handlerDishById.getById(id);
+    return this._handlerDishById.getById(id);
   }
   
   @Put(':id')

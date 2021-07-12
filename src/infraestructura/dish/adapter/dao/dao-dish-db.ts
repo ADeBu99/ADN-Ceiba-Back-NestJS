@@ -1,5 +1,5 @@
-import { EntityManager, Repository } from 'typeorm';
-import { InjectEntityManager, InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
 import { Injectable } from '@nestjs/common';
 
 import { DaoDish } from 'src/dominio/dish/port/dao/dao-dish';

@@ -1,4 +1,3 @@
-import { OrderDto } from 'src/aplicacion/order/query/dto/order.dto';
 import { OrderEntity } from 'src/infraestructura/order/entity/order.entidad';
 
 export abstract class DaoOrder {

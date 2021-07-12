@@ -5,7 +5,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { Order } from 'src/dominio/order/model/order';
-import { OrderDto } from 'src/aplicacion/order/query/dto/order.dto';
 
 @Injectable()
 export class OrderRepositoryDb implements OrderRespository {

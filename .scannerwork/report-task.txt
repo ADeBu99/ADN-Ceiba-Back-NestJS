@@ -2,5 +2,5 @@ projectKey=EstrellaMarina
 serverUrl=http://localhost:9000
 serverVersion=9.0.0.45539
 dashboardUrl=http://localhost:9000/dashboard?id=EstrellaMarina
-ceTaskId=AXqbsBBfKxeLkr4VxyYe
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXqbsBBfKxeLkr4VxyYe
+ceTaskId=AXqb526-KxeLkr4VxyYh
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXqb526-KxeLkr4VxyYh

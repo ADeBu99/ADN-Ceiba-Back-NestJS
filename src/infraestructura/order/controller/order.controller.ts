@@ -17,7 +17,6 @@ import { HandlerOrderById } from 'src/aplicacion/order/query/order-by-id.handler
 import { HandlerOrderRemove } from 'src/aplicacion/order/query/remove-order.handler';
 import { HandlerCreateOrder } from 'src/aplicacion/order/command/create-order.handler';
 import { OrderEntity } from '../entity/order.entidad';
-import { Order } from 'src/dominio/order/model/order';
 
 @ApiTags('orders')
 @Controller('orders')
@@ -42,7 +41,7 @@ export class OrderController {
 
   @Get(':id')
   async getById(@Param('id') id: number): Promise<OrderEntity> {
-    return await this._handlerOrderById.getById(id);
+    return this._handlerOrderById.getById(id);
   }
 
   @Delete(':id')

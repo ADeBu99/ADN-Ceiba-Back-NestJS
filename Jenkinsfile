@@ -19,7 +19,7 @@ pipeline{
 			stage('Checkout') {
 				steps {
                 echo '------------>Checkout desde Git Microservicio<------------'
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default' , submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'ADeBu99', url: 'https://github.com/AdrianDel07/estrella-marina-backend']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default' , submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'ADeBu99', url: 'https://github.com/ADeBu99/ADN-Ceiba-Back-NestJS.git']]])
 				}
 			}
 		
@@ -41,7 +41,7 @@ pipeline{
 			 	steps{
 			 		echo '------------>Analisis de código estático<------------'
 			 		  withSonarQubeEnv('Sonar') {
-                         sh "${tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner -Dsonar.projectKey=127e9d4358f208b08593836abc74cca3d09f1fb9 -Dsonar.projectName=estrella-marina -Dproject.settings=./sonar-project.properties"
+                         sh "${tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner -D sonar.projectKey=EstrellaMarina -Dsonar.projectName=estrella-marina -Dproject.settings=./sonar-project.properties"
                       }
 			 	}
 			 }

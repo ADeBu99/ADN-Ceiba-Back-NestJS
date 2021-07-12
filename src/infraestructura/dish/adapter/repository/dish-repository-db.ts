@@ -1,4 +1,3 @@
-import { RepositorioUsuario } from 'src/dominio/usuario/puerto/repositorio/repositorio-usuario';
 import { DishRespository } from 'src/dominio/dish/port/respository/dish-repository';
 import { Dish } from 'src/dominio/dish/model/dish';
 import { DishEntity } from '../../entity/dish.entidad';
@@ -17,7 +16,7 @@ export class DishRepositoryDb implements DishRespository {
 
   async save(dish: Dish): Promise<DishEntity> {
     const newData = this.repositorio.create(dish);
-    return await this.repositorio.save(newData);
+    return this.repositorio.save(newData);
   }
 
   async update(id: number, changes: UpdateDishDto): Promise<DishEntity> {
