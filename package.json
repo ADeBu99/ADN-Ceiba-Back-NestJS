@@ -37,6 +37,7 @@
     "class-transformer": "^0.2.3",
     "class-validator": "^0.12.2",
     "cross-env": "^7.0.2",
+    "joi": "^17.4.1",
     "pg": "^8.6.0",
     "postgres": "^1.0.2",
     "reflect-metadata": "^0.1.13",
