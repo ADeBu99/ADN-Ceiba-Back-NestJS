@@ -1,7 +1,7 @@
 import { OrderEntity } from 'src/infraestructura/order/entity/order.entidad';
 
 export abstract class DaoOrder {
-  abstract async toList(): Promise<OrderEntity[]>;
-  abstract async byId(id): Promise<OrderEntity>;
-  abstract async remove(id: number): Promise<void>;
+  abstract toList(): Promise<OrderEntity[]>;
+  abstract byId(id): Promise<OrderEntity>;
+  abstract remove(id: number): Promise<void>;
 }

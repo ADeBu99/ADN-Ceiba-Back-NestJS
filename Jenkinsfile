@@ -1,7 +1,7 @@
 pipeline{
 	
 		agent {
-		label 'Principal '
+		label 'Slave_Induccion'
 		}
 	
         
